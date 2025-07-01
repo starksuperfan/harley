@@ -32,7 +32,18 @@
         <input type="checkbox" id="alevel" name="level" value="A Level">
         <label for="alevel">A Level</label>
         <br><br>
-        
+
+        <label>Session Type:</label><br>
+        <input type="radio" id="one2one" name="session_type" value="1-1" checked>
+        <label for="one2one">1-1</label>
+        <input type="radio" id="group" name="session_type" value="Group">
+        <label for="group">Group</label>
+        <br><br>
+        <div id="groupSizeDiv" style="display:none;">
+          <label for="group_size">Number of People in Group:</label><br>
+          <input type="number" id="group_size" name="group_size" min="2" max="50"><br><br>
+        </div>
+
         <label for="remarks">Remarks:</label><br>
         <textarea id="remarks" name="remarks" rows="3"></textarea><br><br>
         
@@ -43,5 +54,25 @@
       <p>Or DM me on Instagram: <a href="https://instagram.com/miadoesalot" target="_blank">@miadoesalot</a></p>
     </section>
   </main>
+  <script>
+    // Show/hide group size input based on session type selection
+    const one2oneRadio = document.getElementById('one2one');
+    const groupRadio = document.getElementById('group');
+    const groupSizeDiv = document.getElementById('groupSizeDiv');
+
+    function toggleGroupSize() {
+      if (groupRadio.checked) {
+        groupSizeDiv.style.display = 'block';
+      } else {
+        groupSizeDiv.style.display = 'none';
+      }
+    }
+
+    one2oneRadio.addEventListener('change', toggleGroupSize);
+    groupRadio.addEventListener('change', toggleGroupSize);
+
+    // Run on page load
+    toggleGroupSize();
+  </script>
 </body>
 </html>
