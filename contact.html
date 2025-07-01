@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Me - HARLEY</title>
+  <title>Contact Me - Mia Lin</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,21 +14,36 @@
       <h2>Contact Me</h2>
       <p>Fill in the enquiry form below, email me, or DM me on Instagram!</p>
       
-      <form action="mailto:harleydoesalot@gmail.com" method="post" enctype="text/plain">
+      <form action="mailto:contactmialin@gmail.com" method="post" enctype="text/plain">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
         
         <label for="email">Your Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
         
+        <label for="subject">Interested Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+        
+        <label>Level:</label><br>
+        <input type="checkbox" id="gcse" name="level" value="GCSE">
+        <label for="gcse">GCSE</label>
+        <input type="checkbox" id="igcse" name="level" value="IGCSE">
+        <label for="igcse">IGCSE</label>
+        <input type="checkbox" id="alevel" name="level" value="A Level">
+        <label for="alevel">A Level</label>
+        <br><br>
+        
         <label for="message">Message:</label><br>
         <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+        <label for="remarks">Extra Remarks:</label><br>
+        <textarea id="remarks" name="remarks" rows="3"></textarea><br><br>
         
         <input type="submit" value="Send">
       </form>
       
-      <p>Or email: <a href="mailto:harleydoesalot@gmail.com">harleydoesalot@gmail.com</a></p>
-      <p>Or DM me on Instagram: <a href="https://instagram.com/harleydoesalot" target="_blank">@harleydoesalot</a></p>
+      <p>Or email: <a href="mailto:contactmialin@gmail.com">contactmialin@gmail.com</a></p>
+      <p>Or DM me on Instagram: <a href="https://instagram.com/miadoesalot" target="_blank">@miadoesalot</a></p>
     </section>
   </main>
 </body>
